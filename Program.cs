@@ -17,6 +17,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
-app.MapGet("/", () => "up");
+app.MapGet("/", () => "green");
 app.MapControllers();  
 app.Run();

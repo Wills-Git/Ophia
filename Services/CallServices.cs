@@ -23,7 +23,7 @@ public class CallService
             new PhoneNumberIdentifier(targetPhoneNumber), _sourceNumber
         );
 
-        var callbackUri = new Uri("https://yourdomain.com/api/call/control");
+        var callbackUri = new Uri("https://ophiaapi-fdc7dvfhfahqhdhq.centralus-01.azurewebsites.net/api/call/control");
         var result = await _callAutomationClient.CreateCallAsync(invite, callbackUri);
     }
 }
