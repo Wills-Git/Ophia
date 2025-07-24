@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "iqhINeq+FtM=",
+  "success": true,
+  "projectFilePath": "/Users/slammajamma/Documents/coding/OphiaApi/OphiaApi.csproj",
+  "expectedPackageFiles": [
+    "/Users/slammajamma/.nuget/packages/azure.communication.callautomation/1.4.0/azure.communication.callautomation.1.4.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/azure.communication.callingserver/1.0.0-beta.3/azure.communication.callingserver.1.0.0-beta.3.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/azure.communication.common/1.4.0/azure.communication.common.1.4.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/azure.core/1.46.1/azure.core.1.46.1.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/microsoft.aspnetcore.openapi/8.0.6/microsoft.aspnetcore.openapi.8.0.6.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/microsoft.bcl.asyncinterfaces/8.0.0/microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.2/microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.3/microsoft.extensions.logging.abstractions.8.0.3.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/microsoft.openapi/1.4.3/microsoft.openapi.1.4.3.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/swashbuckle.aspnetcore/6.4.0/swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/swashbuckle.aspnetcore.swagger/6.4.0/swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.4.0/swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.4.0/swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/system.clientmodel/1.4.1/system.clientmodel.1.4.1.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/system.memory.data/6.0.1/system.memory.data.6.0.1.nupkg.sha512",
+    "/Users/slammajamma/.nuget/packages/system.text.json/4.6.0/system.text.json.4.6.0.nupkg.sha512"
+  ],
+  "logs": []
+}
