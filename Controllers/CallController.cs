@@ -43,8 +43,8 @@ namespace VoiceCallApi.Controllers
                 if (callEvent is CallConnected connected)
                 {
                     var callConnection = _callAutomationClient.GetCallConnection(connected.CallConnectionId);
-
-                    var playSource = new TextSource("hello handsome")
+                    
+                    var playSource = new TextSource("hello hello hello hello hello hello handsome")
                     {
                         VoiceName = "en-US-AriaNeural"
                     };
