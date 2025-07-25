@@ -64,7 +64,7 @@ namespace VoiceCallApi.Controllers
             }
 
 
-            return Ok;
+            return Ok();
 
         }
     }
