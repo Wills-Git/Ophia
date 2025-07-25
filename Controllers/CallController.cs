@@ -1,5 +1,9 @@
+using Azure.Messaging;
+using Azure.Communication.CallAutomation;
 using Microsoft.AspNetCore.Mvc;
-using VoiceCallApi.Models;
+using System.Text.Json;
+using System.Text;
+using System.IO;
 
 namespace VoiceCallApi.Controllers
 {
@@ -7,31 +11,60 @@ namespace VoiceCallApi.Controllers
     [Route("api/[controller]")]
     public class CallController : ControllerBase
     {
-        [HttpPost("control")]
-        public IActionResult ControlCall()
+        private readonly CallAutomationClient _callAutomationClient;
+        private readonly CallService _callService;
+
+        public CallController(CallAutomationClient callAutomationClient, CallService callService)
         {
-            var responsePayload = new CallControllResponse
+            _callAutomationClient = callAutomationClient;
+            _callService = callService;
+        }
+
+        [HttpPost("makecall")]
+        public async Task<IActionResult> MakeCall([FromBody] string targetPhoneNumber)
+        {
+            await _callService.MakeCallAsync(targetPhoneNumber);
+            return Ok("call initiated");
+        }
+
+
+        [HttpPost("control")]
+        public async Task<IActionResult> ControlCall()
+        {
+            using var reader = new StreamReader(Request.Body);
+            var body = await reader.ReadToEndAsync();
+
+            var cloudEvents = CloudEvent.ParseMany(BinaryData.FromString(body));
+
+            var events = CallAutomationEventParser.ParseMany(cloudEvents);
+
+            foreach (var callEvent in events)
             {
-                PlayPrompt = new PlayPrompt
+                if (callEvent is CallConnected connected)
                 {
-                    TextToSpeech = new TextToSpeech
+                    var callConnection = _callAutomationClient.GetCallConnection(connected.CallConnectionId);
+
+                    var playSource = new TextSource("hello handsome")
                     {
-                        Text = "hello handsome",
-                        VoiceGender = "Male",
                         VoiceName = "en-US-AriaNeural"
-                    }
-                },
-                Record = new RecordOptions
-                {
-                    MaxDurationSeconds = 30,
-                    StopTones = new[] { "#" },
-                    PlayBeep = true,
-                    RecordingFormat = "wav"
+                    };
+
+
+                    await callConnection.GetCallMedia().PlayToAllAsync(playSource);
+
+                    var recordOptions = new StartRecordingOptions(new ServerCallLocator(connected.ServerCallId))
+                    {
+                        RecordingChannel = RecordingChannel.Mixed,
+                        RecordingContent = RecordingContent.Audio,
+                        RecordingFormat = RecordingFormat.Wav
+                    };
+
+                    await _callAutomationClient.GetCallRecording().StartAsync(recordOptions);
                 }
+            }
 
-            };
 
-            return new JsonResult(responsePayload);
+            return Ok;
 
         }
     }
