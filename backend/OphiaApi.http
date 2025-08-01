@@ -1,0 +1,6 @@
+@OphiaApi_HostAddress = http://localhost:5139
+
+GET {{OphiaApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

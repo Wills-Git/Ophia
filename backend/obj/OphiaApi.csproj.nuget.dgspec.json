@@ -1,0 +1,95 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/slammajamma/Documents/coding/OphiaApi/OphiaApi.csproj": {}
+  },
+  "projects": {
+    "/Users/slammajamma/Documents/coding/OphiaApi/OphiaApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/slammajamma/Documents/coding/OphiaApi/OphiaApi.csproj",
+        "projectName": "OphiaApi",
+        "projectPath": "/Users/slammajamma/Documents/coding/OphiaApi/OphiaApi.csproj",
+        "packagesPath": "/Users/slammajamma/.nuget/packages/",
+        "outputPath": "/Users/slammajamma/Documents/coding/OphiaApi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/slammajamma/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Azure.Communication.CallAutomation": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
+            "Azure.Communication.CallingServer": {
+              "target": "Package",
+              "version": "[1.0.0-beta.3, )"
+            },
+            "Azure.Communication.Common": {
+              "target": "Package",
+              "version": "[1.4.0, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[8.0.6, )"
+            },
+            "Microsoft.CognitiveServices.Speech": {
+              "target": "Package",
+              "version": "[1.45.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
